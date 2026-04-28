@@ -892,3 +892,55 @@ body.operate-page .wide-image img {
 body.highlights-page .navbar {
   transition: none;
 }
+
+/* =======================
+   CLEAN MOBILE NAVBAR FIX
+======================= */
+@media (max-width: 650px) {
+  .navbar {
+    position: absolute;
+    top: 18px;
+    width: calc(100% - 28px);
+    height: auto;
+    min-height: 92px;
+    padding: 18px 20px;
+    border-radius: 28px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .logo {
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 18px;
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+  }
+
+  .nav-links a::after {
+    bottom: -5px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(54px, 17vw, 86px);
+    line-height: 1.05;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+    line-height: 1.45;
+  }
+}
