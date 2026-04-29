@@ -944,3 +944,110 @@ body.highlights-page .navbar {
     line-height: 1.45;
   }
 }
+
+/* =========================
+   MEMBERS DIVIDER
+========================= */
+.members-divider {
+  width: 82%;
+  height: 1px;
+  margin: 90px auto 70px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+}
+
+/* =========================
+   BROTHERS SECTION
+========================= */
+.brothers-section {
+  background: #4A5168;
+  padding: 0 8% 120px;
+}
+
+.brothers-title {
+  font-family: "Cinzel", serif;
+  font-size: clamp(44px, 7vw, 90px);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+}
+
+.brothers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.brother-card {
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 24px;
+  padding: 24px;
+  transition: 0.35s ease;
+}
+
+.brother-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255,255,255,0.32);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.28);
+}
+
+.brother-card img {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 18px;
+  margin-bottom: 24px;
+}
+
+.brother-card img {
+  transition: 0.4s ease;
+}
+
+.brother-card:hover img {
+  transform: scale(1.05);
+}
+
+.brother-card h2 {
+  font-family: "Cinzel", serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.member-bullets {
+  list-style: none;
+  padding-left: 0;
+  color: rgba(255,255,255,0.78);
+}
+
+.member-bullets li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 9px;
+  line-height: 1.5;
+}
+
+.member-bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: white;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .brothers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brother-card img {
+    height: 330px;
+  }
+}
