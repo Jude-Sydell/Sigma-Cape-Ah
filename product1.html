@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product | Sigma Cape-Ah</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="product-body">
+
+  <header class="navbar">
+    <a href="index.html" class="logo">Σ CAPE-AH</a>
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="members.html">Members</a>
+    <a href="highlights.html">Highlights</a>
+    <a href="gear.html" class="active">Gear</a>
+    <a href="operate.html">How We Operate</a>
+  </nav>
+</header>
+
+  <a href="gear.html" class="product-back">←</a>
+
+  <main class="product-layout">
+
+    <section class="product-left">
+      <button class="product-arrow product-arrow-left" onclick="prevImage()">‹</button>
+
+      <div class="product-image-card">
+        <img id="productImage" src="images/product1.png" alt="Product Image" />
+      </div>
+
+      <button class="product-arrow product-arrow-right" onclick="nextImage()">›</button>
+
+      <div class="product-dots">
+        <button class="product-dot active" onclick="goToImage(0)"></button>
+        <button class="product-dot" onclick="goToImage(1)"></button>
+        <button class="product-dot" onclick="goToImage(2)"></button>
+        <button class="product-dot" onclick="goToImage(3)"></button>
+      </div>
+    </section>
+
+    <section class="product-info">
+      <p class="product-label">SIGMA CAPE-AH GEAR</p>
+
+      <h1>Golf The Open Tee</h1>
+
+      <p class="product-price">$18.57+</p>
+
+      <p class="product-description">
+        A clean white tee with The Masters themed Sigma Cape-Ah graphics on the front left chest and back.
+      </p>
+
+      <a href="https://www.etsy.com/listing/4496717177/sigma-cape-ah-golf-the-open-tee?ref=shop_home_active_1&logging_key=84e831478fc8db41f6a8938b5762751943b11578%3A4496717177" class="product-buy">Buy Now</a>
+    </section>
+
+  </main>
+
+  <script>
+    const images = [
+      "images/product1.png",
+      "images/product1.2.png",
+      "images/product1.3.png",
+      "images/product1.4.png"
+    ];
+
+    let currentImage = 0;
+
+    function updateImage() {
+      document.getElementById("productImage").src = images[currentImage];
+
+      document.querySelectorAll(".product-dot").forEach((dot, index) => {
+        dot.classList.toggle("active", index === currentImage);
+      });
+    }
+
+    function nextImage() {
+      currentImage = (currentImage + 1) % images.length;
+      updateImage();
+    }
+
+    function prevImage() {
+      currentImage = (currentImage - 1 + images.length) % images.length;
+      updateImage();
+    }
+
+    function goToImage(index) {
+      currentImage = index;
+      updateImage();
+    }
+  </script>
+
+</body>
+</html>
