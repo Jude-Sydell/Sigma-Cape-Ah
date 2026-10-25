@@ -91,7 +91,13 @@ function initMenu() {
    PASSWORD SYSTEM
 ======================= */
 function initPassword() {
-  const correctPassword = "Sig2000";
+  // SHA-256 of the lowercase access code, so the code itself isn't in the source
+  const accessHash = "5d12ad616a4f430f4a2a04f483bc58c701daeee262f63bf20ef7b1d8252236fa";
+
+  const sha256 = async (text) => {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+    return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+  };
 
   const overlay = document.getElementById("passwordOverlay");
   const form = document.getElementById("passwordForm");
@@ -112,10 +118,10 @@ function initPassword() {
   behind.forEach((el) => el.setAttribute("inert", ""));
   if (window.matchMedia("(pointer: fine)").matches) input.focus();
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    if (input.value.trim() === correctPassword) {
+    if (await sha256(input.value.trim().toLowerCase()) === accessHash) {
       store("set", "siteAccess", "granted");
       error.textContent = "";
       overlay.classList.add("unlocked");

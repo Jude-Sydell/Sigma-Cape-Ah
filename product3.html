@@ -6,6 +6,7 @@
   <title>Sigma Cape-Ah Soft Shell Vest | Sigma Cape-Ah</title>
   <meta name="description" content="Sigma Cape-Ah Soft Shell Vest — A light weight soft shell vest with the Sigma Cape-Ah logo on the left chest." />
   <meta name="theme-color" content="#050505" />
+  <meta name="robots" content="noindex, nofollow" />
   <meta property="og:title" content="Sigma Cape-Ah Soft Shell Vest | Sigma Cape-Ah" />
   <meta property="og:description" content="Sigma Cape-Ah Soft Shell Vest — A light weight soft shell vest with the Sigma Cape-Ah logo on the left chest." />
   <meta property="og:image" content="images/web/hero.jpg" />
@@ -14,16 +15,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20" />
+  <link rel="stylesheet" href="styles.css?v=21" />
 
   <script>
     document.documentElement.classList.add("js");
     try { if (sessionStorage.getItem("siteAccess") === "granted") document.documentElement.classList.add("access-granted"); } catch (e) {}
   </script>
-  <script src="script.js?v=20" defer></script>
+  <script src="script.js?v=21" defer></script>
 </head>
 
 <body>
+
+  <div id="passwordOverlay" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <form class="passwordBox" id="passwordForm" novalidate>
+      <div class="sigil" aria-hidden="true">Σ</div>
+      <p class="label">Private Access</p>
+      <h2 id="gate-title" translate="no">Sigma Cape-Ah</h2>
+
+      <label for="passwordInput">Access code</label>
+      <input type="password" id="passwordInput" name="access-code" placeholder="Enter access code…" autocomplete="off" autocapitalize="off" spellcheck="false" required />
+
+      <button type="submit" class="btn" id="passwordButton">Enter Site <span class="arrow" aria-hidden="true">→</span></button>
+
+      <p id="passwordError" role="alert" aria-live="polite"></p>
+    </form>
+  </div>
 
   <a class="skip-link" href="#main">Skip to Content</a>
 
