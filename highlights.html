@@ -2,70 +2,156 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Highlights | Sigma Cape-Ah</title>
+  <meta name="description" content="Photos and videos from Sigma Cape-Ah." />
+  <meta name="theme-color" content="#050505" />
+  <meta property="og:title" content="Highlights | Sigma Cape-Ah" />
+  <meta property="og:description" content="Photos and videos from Sigma Cape-Ah." />
+  <meta property="og:image" content="images/web/hero.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23050505'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23cdb47d' font-family='serif'%3E%CE%A3%3C/text%3E%3C/svg%3E" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20" />
+
+  <script>
+    document.documentElement.classList.add("js");
+    try { if (sessionStorage.getItem("siteAccess") === "granted") document.documentElement.classList.add("access-granted"); } catch (e) {}
+  </script>
+  <script src="script.js?v=20" defer></script>
 </head>
 
-<body class="highlights-page">
+<body>
 
-  <!-- NAVBAR -->
+  <a class="skip-link" href="#main">Skip to Content</a>
+
   <header class="navbar">
-    <a href="index.html" class="logo">Σ Cape-Ah</a>
+    <a href="index.html" class="logo" translate="no"><span>Σ</span> Cape-Ah</a>
 
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="members.html">Members</a>
-      <a href="highlights.html" class="active">Highlights</a>
+      <a href="highlights.html" aria-current="page">Highlights</a>
       <a href="gear.html">Gear</a>
       <a href="operate.html">How We Operate</a>
     </nav>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-sheet" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
   </header>
 
-  <!-- IMAGES -->
-  <section class="highlights-section">
-    <p class="section-label">Photos</p>
+  <nav class="menu-sheet" id="menu-sheet" aria-label="Mobile">
+    <a href="index.html" style="--i:0"><small>01</small>Home</a>
+    <a href="members.html" style="--i:1"><small>02</small>Members</a>
+    <a href="highlights.html" style="--i:2" aria-current="page"><small>03</small>Highlights</a>
+    <a href="gear.html" style="--i:3"><small>04</small>Gear</a>
+    <a href="operate.html" style="--i:4"><small>05</small>How We Operate</a>
+  </nav>
 
-    <div class="highlights-grid">
-      <img src="images/highlight1.JPG" onclick="openModal(this.src)">
-      <img src="images/highlight2.JPG" onclick="openModal(this.src)">
-      <img src="images/highlight3.JPG" onclick="openModal(this.src)">
-      <img src="images/highlight4.JPG" onclick="openModal(this.src)">
-      <img src="images/highlight5.JPG" onclick="openModal(this.src)">
-      <img src="images/highlight6.JPG" onclick="openModal(this.src)">
-      <img src="images/highlight7.JPG" onclick="openModal(this.src)">
-      <img src="images/highlight8.png" onclick="openModal(this.src)">
+  <main id="main">
+
+    <section class="page-head">
+      <div class="wrap">
+        <p class="label reveal">Moments</p>
+        <h1 class="reveal" style="--d:1">Highlights</h1>
+        <p class="reveal" style="--d:2">Tap any photo or video to view it full screen. Swipe or use the arrow keys to move through them.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="photos-title" style="padding-top:24px">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="label">Photos</p>
+            <h2 id="photos-title">From the Year</h2>
+          </div>
+        </div>
+        <div class="masonry">
+          <button class="media-tile reveal" type="button" style="--d:0" data-lightbox="highlights" data-src="images/web/highlight1.jpg" data-alt="Highlight photo 1" aria-label="Open photo 1">
+            <img src="images/web/highlight1.jpg" alt="Highlight photo 1" width="1200" height="1600" loading="eager" decoding="async" />
+          </button>
+          <button class="media-tile reveal" type="button" style="--d:1" data-lightbox="highlights" data-src="images/web/highlight2.jpg" data-alt="Highlight photo 2" aria-label="Open photo 2">
+            <img src="images/web/highlight2.jpg" alt="Highlight photo 2" width="1200" height="1600" loading="eager" decoding="async" />
+          </button>
+          <button class="media-tile reveal" type="button" style="--d:2" data-lightbox="highlights" data-src="images/web/highlight3.jpg" data-alt="Highlight photo 3" aria-label="Open photo 3">
+            <img src="images/web/highlight3.jpg" alt="Highlight photo 3" width="1200" height="1600" loading="lazy" decoding="async" />
+          </button>
+          <button class="media-tile reveal" type="button" style="--d:3" data-lightbox="highlights" data-src="images/web/highlight4.jpg" data-alt="Highlight photo 4" aria-label="Open photo 4">
+            <img src="images/web/highlight4.jpg" alt="Highlight photo 4" width="1200" height="1600" loading="lazy" decoding="async" />
+          </button>
+          <button class="media-tile reveal" type="button" style="--d:0" data-lightbox="highlights" data-src="images/web/highlight5.jpg" data-alt="Highlight photo 5" aria-label="Open photo 5">
+            <img src="images/web/highlight5.jpg" alt="Highlight photo 5" width="1200" height="1600" loading="lazy" decoding="async" />
+          </button>
+          <button class="media-tile reveal" type="button" style="--d:1" data-lightbox="highlights" data-src="images/web/highlight6.jpg" data-alt="Highlight photo 6" aria-label="Open photo 6">
+            <img src="images/web/highlight6.jpg" alt="Highlight photo 6" width="1200" height="1600" loading="lazy" decoding="async" />
+          </button>
+          <button class="media-tile reveal" type="button" style="--d:2" data-lightbox="highlights" data-src="images/web/highlight7.jpg" data-alt="Highlight photo 7" aria-label="Open photo 7">
+            <img src="images/web/highlight7.jpg" alt="Highlight photo 7" width="1200" height="1600" loading="lazy" decoding="async" />
+          </button>
+          <button class="media-tile reveal" type="button" style="--d:3" data-lightbox="highlights" data-src="images/web/highlight8.png" data-alt="Highlight photo 8" aria-label="Open photo 8">
+            <img src="images/web/highlight8.png" alt="Highlight photo 8" width="1600" height="1077" loading="lazy" decoding="async" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="videos-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="label">Videos</p>
+            <h2 id="videos-title">Watch</h2>
+          </div>
+        </div>
+        <div class="videos">
+          <button class="media-tile video-tile reveal" type="button" style="--d:0" data-lightbox="highlights" data-type="video" data-src="videos/video1.mp4" aria-label="Play video 1">
+            <video src="videos/video1.mp4#t=0.1" muted playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+            <span class="video-label">Video 1</span>
+          </button>
+          <button class="media-tile video-tile reveal" type="button" style="--d:1" data-lightbox="highlights" data-type="video" data-src="videos/video2.mp4" aria-label="Play video 2">
+            <video src="videos/video2.mp4#t=0.1" muted playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+            <span class="video-label">Video 2</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Media viewer">
+    <div class="lb-stage"></div>
+    <div class="lb-bar lb-top">
+      <span class="lb-count" aria-live="polite"></span>
+      <button class="icon-btn" type="button" data-lb-close aria-label="Close viewer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
     </div>
-  </section>
-
-  <!-- VIDEOS -->
-  <section class="highlights-section">
-    <p class="section-label">Videos</p>
-
-    <div class="highlights-grid">
-
-      <div class="video-card" onclick="openVideo('videos/video1.mp4')">
-  <video src="videos/video1.mp4#t=0.1" muted playsinline preload="metadata"></video>
-  <div class="play-btn"></div>
+    <div class="lb-bar lb-bottom">
+      <button class="icon-btn" type="button" data-lb-prev aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="icon-btn" type="button" data-lb-next aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
     </div>
+  </dialog>
 
-    <div class="video-card" onclick="openVideo('videos/video2.mp4')">
-  <video src="videos/video2.mp4#t=0.1" muted playsinline preload="metadata"></video>
-  <div class="play-btn"></div>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" translate="no"><span>Σ</span> Cape-Ah</a>
+        <p>The only off campus high school fraternity in the nation. Est.&nbsp;2025.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="members.html">Members</a>
+        <a href="highlights.html">Highlights</a>
+        <a href="gear.html">Gear</a>
+        <a href="operate.html">How We Operate</a>
+      </nav>
+      <button class="to-top" type="button" data-to-top>Back to Top <span aria-hidden="true">↑</span></button>
+      <p class="footer-copy" translate="no">© Sigma Cape-Ah</p>
     </div>
+  </footer>
 
-    </div>
-  </section>
-
-  <!-- MODAL -->
-  <div id="modal" onclick="closeModal()">
-    <span id="closeBtn">×</span>
-    <img id="modalImg">
-    <video id="modalVideo" controls></video>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>

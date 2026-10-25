@@ -1,73 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="script.js" defer></script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Sigma Cape-Ah</title>
+  <meta name="description" content="Sigma Cape-Ah — the only off campus high school fraternity in the nation. Est. 2025." />
+  <meta name="theme-color" content="#050505" />
+  <meta property="og:title" content="Sigma Cape-Ah" />
+  <meta property="og:description" content="Sigma Cape-Ah — the only off campus high school fraternity in the nation. Est. 2025." />
+  <meta property="og:image" content="images/web/hero.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23050505'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23cdb47d' font-family='serif'%3E%CE%A3%3C/text%3E%3C/svg%3E" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20" />
+
+  <script>
+    document.documentElement.classList.add("js");
+    try { if (sessionStorage.getItem("siteAccess") === "granted") document.documentElement.classList.add("access-granted"); } catch (e) {}
+  </script>
+  <script src="script.js?v=20" defer></script>
 </head>
 
 <body>
 
-  <div id="passwordOverlay">
-    <div class="passwordBox">
-      <p class="password-label">Private Access</p>
-      <h2>Sigma Cape-Ah</h2>
+  <div id="passwordOverlay" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <form class="passwordBox" id="passwordForm" novalidate>
+      <div class="sigil" aria-hidden="true">Σ</div>
+      <p class="label">Private Access</p>
+      <h2 id="gate-title" translate="no">Sigma Cape-Ah</h2>
 
-      <input type="password" id="passwordInput" placeholder="Enter access code">
+      <label for="passwordInput">Access code</label>
+      <input type="password" id="passwordInput" name="access-code" placeholder="Enter access code…" autocomplete="off" autocapitalize="off" spellcheck="false" required />
 
-      <button type="button" id="passwordButton">Enter Site</button>
+      <button type="submit" class="btn" id="passwordButton">Enter Site <span class="arrow" aria-hidden="true">→</span></button>
 
-      <p id="passwordError"></p>
-    </div>
+      <p id="passwordError" role="alert" aria-live="polite"></p>
+    </form>
   </div>
 
-  <header class="navbar">
-    <a href="index.html" class="logo">Σ Cape-Ah</a>
+  <a class="skip-link" href="#main">Skip to Content</a>
 
-    <nav class="nav-links">
-      <a href="index.html" class="active">Home</a>
+  <header class="navbar">
+    <a href="index.html" class="logo" translate="no"><span>Σ</span> Cape-Ah</a>
+
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
       <a href="members.html">Members</a>
       <a href="highlights.html">Highlights</a>
       <a href="gear.html">Gear</a>
       <a href="operate.html">How We Operate</a>
     </nav>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-sheet" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
   </header>
 
-  <section class="hero">
-    <div class="hero-overlay"></div>
+  <nav class="menu-sheet" id="menu-sheet" aria-label="Mobile">
+    <a href="index.html" style="--i:0" aria-current="page"><small>01</small>Home</a>
+    <a href="members.html" style="--i:1"><small>02</small>Members</a>
+    <a href="highlights.html" style="--i:2"><small>03</small>Highlights</a>
+    <a href="gear.html" style="--i:3"><small>04</small>Gear</a>
+    <a href="operate.html" style="--i:4"><small>05</small>How We Operate</a>
+  </nav>
 
-    <div class="hero-content">
-      <h1>Sigma Cape-Ah</h1>
-      <p>The only off campus highschool fraternity in the nation</p>
-      <p>Est. 2025</p>
-    </div>
+  <main id="main">
 
-    <div class="scroll-cue">
-      <p>Scroll for upcoming events</p>
-      <span>↓</span>
-    </div>
-  </section>
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-bg" src="images/web/hero.jpg" alt="" width="1600" height="900" fetchpriority="high" />
 
-  <section class="upcoming-section">
-    <p class="section-label">Upcoming Event</p>
-
-    <div class="event-card">
-      <div class="event-image">
-        <img src="images/event1.jpeg" alt="Upcoming event">
+      <div class="hero-content">
+        <h1 class="hero-title" id="hero-title" aria-label="Sigma Cape-Ah" translate="no"><span class="word"><span class="ch" style="--i:1">S</span><span class="ch" style="--i:2">i</span><span class="ch" style="--i:3">g</span><span class="ch" style="--i:4">m</span><span class="ch" style="--i:5">a</span></span> <span class="word"><span class="ch" style="--i:6">C</span><span class="ch" style="--i:7">a</span><span class="ch" style="--i:8">p</span><span class="ch" style="--i:9">e</span><span class="ch" style="--i:10">-</span><span class="ch" style="--i:11">A</span><span class="ch" style="--i:12">h</span></span></h1>
+        <p class="hero-tagline">The only off campus highschool fraternity in the nation</p>
+        <p class="hero-est">Est. 2025</p>
       </div>
 
-      <div class="event-info">
-        <p class="event-date">May 9, 2026</p>
-        <h2>Prom</h2>
-        <p>
-          Another dime another dollar. A fantastic prom night coming up for the brothers of Sigma Cape-Ah. 
+      <a class="scroll-cue" href="#upcoming">
+        <span class="mouse" aria-hidden="true"></span>
+        Scroll for upcoming events
+      </a>
+    </section>
+
+    <div class="wrap">
+      <div class="stats reveal" aria-label="By the numbers">
+        <div class="stat"><strong data-count="2025">2025</strong><span>Established</span></div>
+        <div class="stat"><strong data-count="10">10</strong><span>Officers</span></div>
+        <div class="stat"><strong data-count="24">24</strong><span>Brothers</span></div>
+        <div class="stat"><strong data-count="1">1</strong><span>Year to Pledge</span></div>
       </div>
     </div>
-  </section>
+
+    <section class="section" id="upcoming" aria-labelledby="event-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="label" data-event-label>Upcoming Event</p>
+          </div>
+        </div>
+
+        <article class="event-card reveal">
+          <div class="event-image">
+            <img src="images/web/event1.jpg" alt="Venue for the upcoming prom" width="1600" height="1200" loading="lazy" decoding="async" />
+            <span class="event-badge" data-event-badge>Upcoming</span>
+          </div>
+
+          <div class="event-info">
+            <p class="event-date"><time datetime="2026-05-09" data-event-date="2026-05-09T00:00:00">May 9, 2026</time></p>
+            <h2 id="event-title">Prom</h2>
+            <p>Another dime another dollar. A fantastic prom night coming up for the brothers of Sigma Cape-Ah.</p>
+
+            <div class="countdown" data-countdown="2026-05-09T18:00:00" aria-label="Time until the event">
+              <div><strong data-d>0</strong><span>Days</span></div>
+              <div><strong data-h>00</strong><span>Hours</span></div>
+              <div><strong data-m>00</strong><span>Min</span></div>
+              <div><strong data-s>00</strong><span>Sec</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="explore-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="label">Explore</p>
+            <h2 id="explore-title">Inside the Brotherhood</h2>
+          </div>
+        </div>
+        <div class="tiles">
+        <a href="members.html" class="tile reveal" style="--d:0">
+          <img src="images/web/members-hero.jpg" alt="" width="1600" height="1250" loading="lazy" decoding="async" />
+          <div class="tile-text">
+            <h3>Members <span class="arrow" aria-hidden="true">→</span></h3>
+            <p>Meet the officers and brothers.</p>
+          </div>
+        </a>
+        <a href="highlights.html" class="tile reveal" style="--d:1">
+          <img src="images/web/highlight1.jpg" alt="" width="1200" height="1600" loading="lazy" decoding="async" />
+          <div class="tile-text">
+            <h3>Highlights <span class="arrow" aria-hidden="true">→</span></h3>
+            <p>Photos and videos from the year.</p>
+          </div>
+        </a>
+        <a href="gear.html" class="tile reveal" style="--d:2">
+          <img src="images/web/product2.png" alt="" width="990" height="1000" loading="lazy" decoding="async" />
+          <div class="tile-text">
+            <h3>Gear <span class="arrow" aria-hidden="true">→</span></h3>
+            <p>Official Sigma Cape-Ah merch.</p>
+          </div>
+        </a>
+        <a href="operate.html" class="tile reveal" style="--d:3">
+          <img src="images/web/about2.jpg" alt="" width="1600" height="1200" loading="lazy" decoding="async" />
+          <div class="tile-text">
+            <h3>How We Operate <span class="arrow" aria-hidden="true">→</span></h3>
+            <p>Our purpose and the path to brotherhood.</p>
+          </div>
+        </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" translate="no"><span>Σ</span> Cape-Ah</a>
+        <p>The only off campus high school fraternity in the nation. Est.&nbsp;2025.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="members.html">Members</a>
+        <a href="highlights.html">Highlights</a>
+        <a href="gear.html">Gear</a>
+        <a href="operate.html">How We Operate</a>
+      </nav>
+      <button class="to-top" type="button" data-to-top>Back to Top <span aria-hidden="true">↑</span></button>
+      <p class="footer-copy" translate="no">© Sigma Cape-Ah</p>
+    </div>
+  </footer>
 
 </body>
 </html>

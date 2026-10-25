@@ -2,454 +2,484 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Members | Sigma Cape-Ah</title>
+  <meta name="description" content="Meet the officers and brothers of Sigma Cape-Ah." />
+  <meta name="theme-color" content="#050505" />
+  <meta property="og:title" content="Members | Sigma Cape-Ah" />
+  <meta property="og:description" content="Meet the officers and brothers of Sigma Cape-Ah." />
+  <meta property="og:image" content="images/web/hero.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23050505'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23cdb47d' font-family='serif'%3E%CE%A3%3C/text%3E%3C/svg%3E" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20" />
+
+  <script>
+    document.documentElement.classList.add("js");
+    try { if (sessionStorage.getItem("siteAccess") === "granted") document.documentElement.classList.add("access-granted"); } catch (e) {}
+  </script>
+  <script src="script.js?v=20" defer></script>
 </head>
 
-<body class="members-page">
+<body>
 
-  <section class="members-top">
-    <header class="members-navbar">
-      <a href="index.html" class="members-logo">Σ Cape-Ah</a>
+  <a class="skip-link" href="#main">Skip to Content</a>
 
-     <nav class="members-nav-links">
+  <header class="navbar">
+    <a href="index.html" class="logo" translate="no"><span>Σ</span> Cape-Ah</a>
+
+    <nav class="nav-links" aria-label="Main">
       <a href="index.html">Home</a>
-      <a href="members.html" class="active">Members</a>
+      <a href="members.html" aria-current="page">Members</a>
       <a href="highlights.html">Highlights</a>
       <a href="gear.html">Gear</a>
       <a href="operate.html">How We Operate</a>
-      </nav>
-    </header>
-  </section>
+    </nav>
 
-  <section class="members-hero">
-    <img src="images/members-hero.png" alt="Sigma Cape-Uh members poster">
-  </section>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-sheet" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </header>
 
-  <section class="members-section">
+  <nav class="menu-sheet" id="menu-sheet" aria-label="Mobile">
+    <a href="index.html" style="--i:0"><small>01</small>Home</a>
+    <a href="members.html" style="--i:1" aria-current="page"><small>02</small>Members</a>
+    <a href="highlights.html" style="--i:2"><small>03</small>Highlights</a>
+    <a href="gear.html" style="--i:3"><small>04</small>Gear</a>
+    <a href="operate.html" style="--i:4"><small>05</small>How We Operate</a>
+  </nav>
 
-    <div class="member-card">
-      <img src="images/member1.png" alt="Member 1">
-      <div>
-        <p class="member-subtitle">President/ Founder</p>
-        <h2>Michael Thompson</h2>
-        <p>Mikey Thompson is an outgoing, athletic, and enthusiastic individual. He spends most of his time organizing large events, or competing in school related sports. Mikey is known for his active role as a QB on the football team and a guard on the basketball team. He is liked by all that meet him and is notably great at establishing relationships with new people, making him the perfect candidate for the role of Sigma Cape-Ah president.</p>
+  <main id="main">
+
+    <section class="page-head">
+      <div class="wrap">
+        <p class="label reveal">The Brotherhood</p>
+        <h1 class="reveal" style="--d:1">Members</h1>
+        <p class="reveal" style="--d:2">10 officers and 24 brothers. Tap the composite to zoom in.</p>
       </div>
-    </div>
-
-    <div class="member-card">
-      <img src="images/member2.png" alt="Member 2">
-      <div>
-        <p class="member-subtitle">Vice President</p>
-        <h2>Nate Elliot</h2>
-        <p>Nate Elliot is the man that brings the party. He is a high level professional skim boarder and arguably the loudest and most spirited member of the fraternity. Although he attends Sussex Academy highschool he is a true viking at heart. No other member matches his energy. He spends much of his time at the beach mastering his craft, and the remaining free time he has is spent on encouraging get togethers. </p>
-      </div>
-    </div>
-
-    <div class="member-card">
-      <img src="images/member3.png" alt="Member 3">
-      <div>
-        <p class="member-subtitle">Secretary</p>
-        <h2>Grant Conway</h2>
-        <p>Grant Conway is a brother that always reaches for the top. He strives towards a high GPA, staying shifty on the field, and becoming the best individual he possibly can. Although Grant is one of the quieter members of the fraternity he shows his true colors of passion and grit when sorrounded by the people he is close with. Grant is a high level lacrosse player commited to Randolph-Macon as a class of 2030 Yellow Jacket and accurately represents what Sigma Cape-Ah stands for. </p>
-      </div>
-    </div>
-
-    <div class="member-card">
-      <img src="images/member4.png" alt="Member 4">
-      <div>
-        <p class="member-subtitle">Treasurer</p>
-        <h2>Nolan Moore</h2>
-        <p>Manager of the Lacrosse Team/ part time hunter.</p>
-      </div>
-    </div>
-
-    <div class="member-card">
-      <img src="images/member6.png" alt="Member 6">
-      <div>
-        <p class="member-subtitle">Philanthropy</p>
-        <h2>Brooks Leonhart</h2>
-        <p>Brooks Leonhart is the academic core of Sigma Cape-Ah. With a strong SAT score of 1590 he is the glue that keeps the brothers grades together. He is on the quiet side but is an incredibly athletic and smart individual. He thrives in a group enviorment where there is a tangible goal. Being the smartest of the brothers he was reasonably put in charge of philanthropy. He understands finances, movemenet of assets and takes pride in volunteering and community service making him the perfect candidate for head of philanthropy.</p>
-      </div>
-    </div>
-
-    <div class="member-card">
-      <img src="images/member7.png" alt="Member 7">
-      <div>
-        <p class="member-subtitle">Head of Transportation</p>
-        <h2>Mason Trench</h2>
-        <p>Mason Trench is the man of many spirits. He carries the pride of being a Cape student everywhere he goes. At games and events he never fails to encourage cheering, dressing up, and intense school spirit. He is also the goalie for the lacrosse team, committed to SUNY Maritime College to play D3 lacrosse. He takes pride in taking control and creating a safe but fun experience making him perfect for the head of transportation position.</p>
-      </div>
-    </div>
-
-    <div class="member-card">
-      <img src="images/member8.png" alt="Member 8">
-      <div>
-        <p class="member-subtitle">Pledge Master</p>
-        <h2>Kyle Green</h2>
-        <p>Kyle Green is a man of multifaceted ability; an accomplished swimmer, a dedicated Dewey Beach Patrol lifeguard, and a committed track athlete. Beyond his physical discipline, he is an exceptionally intelligent individual who approaches both academics and real-world challenges with sharp insight and composure. Kyle carries himself with a quiet confidence, balancing ambition with humility, and consistently demonstrates a strong work ethic in everything he pursues. His charismatic presence and natural ability to connect with others make him not only approachable, but genuinely respected among his peers. Kyle embodies the values of Sigma Cape-Ah through his leadership, character, and well-rounded excellence.</p>
-      </div>
-    </div>
-
-    <div class="member-card">
-      <img src="images/member9.png" alt="Member 9">
-      <div>
-        <p class="member-subtitle">Foreign Relations</p>
-        <h2>Brady Schell</h2>
-        <p>Brady Schell is a man of various talents; he is a fantastic swimmer, a stupendously intelligent individual, and great at establishing new relations. He carries himself with confidence in his ability to overcome obstacles and challenges while still remaining humble. Brady is the perfect man for this position being talented in many fields and being able to strike up a conversation with just about anyone, he perfectly represents what Sigma Cape-Ah stands for the in foreign relationships divison.</p>
-      </div>
-    </div>
-
-    <div class="member-card">
-      <img src="images/member10.png" alt="Member 10">
-      <div>
-        <p class="member-subtitle">Head of Recruitment</p>
-        <h2>Carter Nemcic</h2>
-        <p>Carter Nemcic is a highly capable and well-rounded individual, distinguished by both his athletic ability and intellectual strength. As a dedicated lacrosse player, he demonstrates discipline, competitiveness, and a strong sense of teamwork, consistently performing with focus and determination. Beyond athletics, Carter is an exceptionally intelligent individual who approaches challenges with clarity and composure, allowing him to excel in both academic and real-world environments. He carries himself with confidence while remaining grounded, and his ability to engage thoughtfully with others reflects both his character and maturity. Carter exemplifies the standards of Sigma Cape-Ah through his work ethic, versatility, and refined sense of leadership.</p>
-      </div>
-    </div>
-
-    <div class="member-card">
-      <img src="images/member11.png" alt="Member 11">
-      <div>
-        <p class="member-subtitle">Pledge Class President</p>
-        <h2>Channing Smith</h2>
-        <p>Channing Smith is a standout member of the pledge class. Being a top teir athlete Smith carries himself with the utmost confidence and grit. He can be seen spending his time practicing, or putting lots of effort in to continuing his honor roll career through highschool. Channing Smith is a charasmatic individual with undediable pride and passion for everything he is involved in, making him the perfect candidate for the pledge class president.</p>
-      </div>
-    </div>
-
-  
     </section>
 
-    <!-- DIVIDER -->
-<div class="members-divider"></div>
+    <div class="wrap">
+      <button class="poster reveal" type="button" data-lightbox="poster" data-src="images/members-hero.png" data-alt="Sigma Cape-Ah 2025–2026 composite of all members">
+        <img src="images/web/members-hero.jpg" alt="Sigma Cape-Ah 2025–2026 composite of all members" width="1600" height="1250" fetchpriority="high" />
+        <span class="hint" aria-hidden="true">Tap to Zoom</span>
+      </button>
 
-<!-- BROTHERS SECTION -->
-<section class="brothers-section">
+      <div class="member-tools" role="search">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <label for="member-search" class="sr-only">Search members</label>
+          <input type="search" id="member-search" name="q" placeholder="Search name, role, trait…" autocomplete="off" spellcheck="false" />
+        </div>
+        <div class="chips" role="group" aria-label="Show">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-filter="officers" aria-pressed="false">Officers</button>
+          <button class="chip" type="button" data-filter="brothers" aria-pressed="false">Brothers</button>
+        </div>
+        <p class="result-count" id="result-count" aria-live="polite">34 members</p>
+      </div>
 
-  <h1 class="brothers-title">Brothers</h1>
+      <section data-group aria-labelledby="officers-title">
+        <h2 class="group-title" id="officers-title">Officers <small>10</small></h2>
+        <div class="officers">
+          <article class="member-card reveal" data-member="michael thompson president/ founder" data-kind="officers" style="--d:0">
+            <div class="member-photo">
+              <img src="images/web/member1.jpg" alt="Portrait of Michael Thompson" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">President/ Founder</p>
+              <h3>Michael Thompson</h3>
+              <p class="bio clamped" id="bio-1">Mikey Thompson is an outgoing, athletic, and enthusiastic individual. He spends most of his time organizing large events, or competing in school related sports. Mikey is known for his active role as a QB on the football team and a guard on the basketball team. He is liked by all that meet him and is notably great at establishing relationships with new people, making him the perfect candidate for the role of Sigma Cape-Ah president.</p>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-1">Read More</button>
+            </div>
+          </article>
+          <article class="member-card reveal" data-member="nate elliot vice president" data-kind="officers" style="--d:1">
+            <div class="member-photo">
+              <img src="images/web/member2.jpg" alt="Portrait of Nate Elliot" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Vice President</p>
+              <h3>Nate Elliot</h3>
+              <p class="bio clamped" id="bio-2">Nate Elliot is the man that brings the party. He is a high level professional skim boarder and arguably the loudest and most spirited member of the fraternity. Although he attends Sussex Academy highschool he is a true viking at heart. No other member matches his energy. He spends much of his time at the beach mastering his craft, and the remaining free time he has is spent on encouraging get togethers.</p>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-2">Read More</button>
+            </div>
+          </article>
+          <article class="member-card reveal" data-member="grant conway secretary" data-kind="officers" style="--d:0">
+            <div class="member-photo">
+              <img src="images/web/member3.jpg" alt="Portrait of Grant Conway" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Secretary</p>
+              <h3>Grant Conway</h3>
+              <p class="bio clamped" id="bio-3">Grant Conway is a brother that always reaches for the top. He strives towards a high GPA, staying shifty on the field, and becoming the best individual he possibly can. Although Grant is one of the quieter members of the fraternity he shows his true colors of passion and grit when sorrounded by the people he is close with. Grant is a high level lacrosse player commited to Randolph-Macon as a class of 2030 Yellow Jacket and accurately represents what Sigma Cape-Ah stands for.</p>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-3">Read More</button>
+            </div>
+          </article>
+          <article class="member-card reveal" data-member="nolan moore treasurer" data-kind="officers" style="--d:1">
+            <div class="member-photo">
+              <img src="images/web/member4.jpg" alt="Portrait of Nolan Moore" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Treasurer</p>
+              <h3>Nolan Moore</h3>
+              <p class="bio clamped" id="bio-4">Manager of the Lacrosse Team/ part time hunter.</p>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-4">Read More</button>
+            </div>
+          </article>
+          <article class="member-card reveal" data-member="brooks leonhart philanthropy" data-kind="officers" style="--d:0">
+            <div class="member-photo">
+              <img src="images/web/member6.jpg" alt="Portrait of Brooks Leonhart" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Philanthropy</p>
+              <h3>Brooks Leonhart</h3>
+              <p class="bio clamped" id="bio-6">Brooks Leonhart is the academic core of Sigma Cape-Ah. With a strong SAT score of 1590 he is the glue that keeps the brothers grades together. He is on the quiet side but is an incredibly athletic and smart individual. He thrives in a group enviorment where there is a tangible goal. Being the smartest of the brothers he was reasonably put in charge of philanthropy. He understands finances, movemenet of assets and takes pride in volunteering and community service making him the perfect candidate for head of philanthropy.</p>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-6">Read More</button>
+            </div>
+          </article>
+          <article class="member-card reveal" data-member="mason trench head of transportation" data-kind="officers" style="--d:1">
+            <div class="member-photo">
+              <img src="images/web/member7.jpg" alt="Portrait of Mason Trench" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Head of Transportation</p>
+              <h3>Mason Trench</h3>
+              <p class="bio clamped" id="bio-7">Mason Trench is the man of many spirits. He carries the pride of being a Cape student everywhere he goes. At games and events he never fails to encourage cheering, dressing up, and intense school spirit. He is also the goalie for the lacrosse team, committed to SUNY Maritime College to play D3 lacrosse. He takes pride in taking control and creating a safe but fun experience making him perfect for the head of transportation position.</p>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-7">Read More</button>
+            </div>
+          </article>
+          <article class="member-card reveal" data-member="kyle green pledge master" data-kind="officers" style="--d:0">
+            <div class="member-photo">
+              <img src="images/web/member8.jpg" alt="Portrait of Kyle Green" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Pledge Master</p>
+              <h3>Kyle Green</h3>
+              <p class="bio clamped" id="bio-8">Kyle Green is a man of multifaceted ability; an accomplished swimmer, a dedicated Dewey Beach Patrol lifeguard, and a committed track athlete. Beyond his physical discipline, he is an exceptionally intelligent individual who approaches both academics and real-world challenges with sharp insight and composure. Kyle carries himself with a quiet confidence, balancing ambition with humility, and consistently demonstrates a strong work ethic in everything he pursues. His charismatic presence and natural ability to connect with others make him not only approachable, but genuinely respected among his peers. Kyle embodies the values of Sigma Cape-Ah through his leadership, character, and well-rounded excellence.</p>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-8">Read More</button>
+            </div>
+          </article>
+          <article class="member-card reveal" data-member="brady schell foreign relations" data-kind="officers" style="--d:1">
+            <div class="member-photo">
+              <img src="images/web/member9.jpg" alt="Portrait of Brady Schell" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Foreign Relations</p>
+              <h3>Brady Schell</h3>
+              <p class="bio clamped" id="bio-9">Brady Schell is a man of various talents; he is a fantastic swimmer, a stupendously intelligent individual, and great at establishing new relations. He carries himself with confidence in his ability to overcome obstacles and challenges while still remaining humble. Brady is the perfect man for this position being talented in many fields and being able to strike up a conversation with just about anyone, he perfectly represents what Sigma Cape-Ah stands for the in foreign relationships divison.</p>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-9">Read More</button>
+            </div>
+          </article>
+          <article class="member-card reveal" data-member="carter nemcic head of recruitment" data-kind="officers" style="--d:0">
+            <div class="member-photo">
+              <img src="images/web/member10.jpg" alt="Portrait of Carter Nemcic" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Head of Recruitment</p>
+              <h3>Carter Nemcic</h3>
+              <p class="bio clamped" id="bio-10">Carter Nemcic is a highly capable and well-rounded individual, distinguished by both his athletic ability and intellectual strength. As a dedicated lacrosse player, he demonstrates discipline, competitiveness, and a strong sense of teamwork, consistently performing with focus and determination. Beyond athletics, Carter is an exceptionally intelligent individual who approaches challenges with clarity and composure, allowing him to excel in both academic and real-world environments. He carries himself with confidence while remaining grounded, and his ability to engage thoughtfully with others reflects both his character and maturity. Carter exemplifies the standards of Sigma Cape-Ah through his work ethic, versatility, and refined sense of leadership.</p>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-10">Read More</button>
+            </div>
+          </article>
+          <article class="member-card reveal" data-member="channing smith pledge class president" data-kind="officers" style="--d:1">
+            <div class="member-photo">
+              <img src="images/web/member11.jpg" alt="Portrait of Channing Smith" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Pledge Class President</p>
+              <h3>Channing Smith</h3>
+              <p class="bio clamped" id="bio-11">Channing Smith is a standout member of the pledge class. Being a top teir athlete Smith carries himself with the utmost confidence and grit. He can be seen spending his time practicing, or putting lots of effort in to continuing his honor roll career through highschool. Channing Smith is a charasmatic individual with undediable pride and passion for everything he is involved in, making him the perfect candidate for the pledge class president.</p>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-11">Read More</button>
+            </div>
+          </article>
+        </div>
+      </section>
 
-  <div class="brothers-grid">
+      <section data-group aria-labelledby="brothers-title">
+        <h2 class="group-title" id="brothers-title">Brothers <small>24</small></h2>
+        <div class="brothers">
+          <article class="brother-card reveal" data-member="conor garman brother stud of a drinker braved a vicous dog attack manager of the lacrosse team" data-kind="brothers" style="--d:0">
+            <div class="member-photo">
+              <img src="images/web/member12.jpg" alt="Portrait of Conor Garman" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Conor Garman</h3>
+              <ul class="traits"><li>Stud of a drinker</li><li>Braved a vicous dog attack</li><li>Manager of the lacrosse team</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="david adili-khams brother lacrosse player incredibly intelligent random race that isn&#x27;t white" data-kind="brothers" style="--d:1">
+            <div class="member-photo">
+              <img src="images/web/member13.jpg" alt="Portrait of David Adili-Khams" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>David Adili-Khams</h3>
+              <ul class="traits"><li>Lacrosse player</li><li>Incredibly intelligent</li><li>Random race that isn&#x27;t white</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="cooper forcucci brother professional skim boarder very smart best style in the brotherhood" data-kind="brothers" style="--d:2">
+            <div class="member-photo">
+              <img src="images/web/member14.jpg" alt="Portrait of Cooper Forcucci" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Cooper Forcucci</h3>
+              <ul class="traits"><li>Professional skim boarder</li><li>Very smart</li><li>Best style in the brotherhood</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="max levis brother smartest guy in the room great thinker he&#x27;s crazy!!!" data-kind="brothers" style="--d:3">
+            <div class="member-photo">
+              <img src="images/web/member15.jpg" alt="Portrait of Max Levis" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Max Levis</h3>
+              <ul class="traits"><li>Smartest guy in the room</li><li>Great thinker</li><li>He&#x27;s crazy!!!</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="pierce conway brother lacrosse player lots of street smarts human version of a chihuahua" data-kind="brothers" style="--d:0">
+            <div class="member-photo">
+              <img src="images/web/member16.jpg" alt="Portrait of Pierce Conway" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Pierce Conway</h3>
+              <ul class="traits"><li>Lacrosse player</li><li>Lots of street smarts</li><li>Human version of a chihuahua</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="brian marks brother class president big surfer big tuna fishing guy" data-kind="brothers" style="--d:1">
+            <div class="member-photo">
+              <img src="images/web/member17.jpg" alt="Portrait of Brian Marks" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Brian Marks</h3>
+              <ul class="traits"><li>Class president</li><li>Big surfer</li><li>Big tuna fishing guy</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="harper kaser brother baseball player enjoys surfing takes great pride in his 4runner build" data-kind="brothers" style="--d:2">
+            <div class="member-photo">
+              <img src="images/web/member18.jpg" alt="Portrait of Harper Kaser" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Harper Kaser</h3>
+              <ul class="traits"><li>Baseball player</li><li>Enjoys Surfing</li><li>Takes great pride in his 4runner build</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="drew mongeluzo brother lacrosse player mr. outdoors avid 2 girls 1 cup rewatcher" data-kind="brothers" style="--d:3">
+            <div class="member-photo">
+              <img src="images/web/member19.jpg" alt="Portrait of Drew Mongeluzo" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Drew Mongeluzo</h3>
+              <ul class="traits"><li>Lacrosse player</li><li>Mr. Outdoors</li><li>Avid 2 girls 1 cup rewatcher</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="jack simeone brother baseball player big napper loves college football" data-kind="brothers" style="--d:0">
+            <div class="member-photo">
+              <img src="images/web/member20.jpg" alt="Portrait of Jack Simeone" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Jack Simeone</h3>
+              <ul class="traits"><li>Baseball player</li><li>Big napper</li><li>Loves college football</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="john keys brother boat builder very intelligent big boat" data-kind="brothers" style="--d:1">
+            <div class="member-photo">
+              <img src="images/web/member21.jpg" alt="Portrait of John Keys" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>John Keys</h3>
+              <ul class="traits"><li>Boat builder</li><li>Very intelligent</li><li>Big boat</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="lee levis brother soccer player great team player super smart" data-kind="brothers" style="--d:2">
+            <div class="member-photo">
+              <img src="images/web/member22.jpg" alt="Portrait of Lee Levis" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Lee Levis</h3>
+              <ul class="traits"><li>Soccer player</li><li>Great team player</li><li>Super smart</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="braddock smith brother lacrosse player problem solver always reliable" data-kind="brothers" style="--d:3">
+            <div class="member-photo">
+              <img src="images/web/member23.jpg" alt="Portrait of Braddock Smith" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Braddock Smith</h3>
+              <ul class="traits"><li>Lacrosse player</li><li>Problem solver</li><li>Always reliable</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="ethan james brother baby hippo in ap classes but isn&#x27;t an ap level student nickname: teethan (gives straight teeth)" data-kind="brothers" style="--d:0">
+            <div class="member-photo">
+              <img src="images/web/member24.jpg" alt="Portrait of Ethan James" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Ethan James</h3>
+              <ul class="traits"><li>Baby hippo</li><li>In AP classes but isn&#x27;t an AP level student</li><li>Nickname: Teethan (gives straight teeth)</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="lawson whaley brother soccer player volleyball player loves boating and the beach" data-kind="brothers" style="--d:1">
+            <div class="member-photo">
+              <img src="images/web/member25.jpg" alt="Portrait of Lawson Whaley" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Lawson Whaley</h3>
+              <ul class="traits"><li>Soccer player</li><li>Volleyball player</li><li>Loves boating and the beach</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="matthew popovich brother lacrosse player great student very smart" data-kind="brothers" style="--d:2">
+            <div class="member-photo">
+              <img src="images/web/member26.jpg" alt="Portrait of Matthew Popovich" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Matthew Popovich</h3>
+              <ul class="traits"><li>Lacrosse player</li><li>Great student</li><li>Very smart</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="eric uffleman brother lacrosse player loves boating and spear fishing gorgeous mustache" data-kind="brothers" style="--d:3">
+            <div class="member-photo">
+              <img src="images/web/member27.jpg" alt="Portrait of Eric Uffleman" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Eric Uffleman</h3>
+              <ul class="traits"><li>Lacrosse player</li><li>Loves boating and spear fishing</li><li>Gorgeous mustache</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="holden moore brother lacrosse player little comedian ambitious" data-kind="brothers" style="--d:0">
+            <div class="member-photo">
+              <img src="images/web/member28.jpg" alt="Portrait of Holden Moore" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Holden Moore</h3>
+              <ul class="traits"><li>Lacrosse player</li><li>Little comedian</li><li>Ambitious</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="carter staggs brother big hunter big fisherman can&#x27;t find a haircut that fits him" data-kind="brothers" style="--d:1">
+            <div class="member-photo">
+              <img src="images/web/member29.jpg" alt="Portrait of Carter Staggs" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Carter Staggs</h3>
+              <ul class="traits"><li>Big hunter</li><li>Big fisherman</li><li>Can&#x27;t find a haircut that fits him</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="patrick healy brother lacrosse player former golfer very smart" data-kind="brothers" style="--d:2">
+            <div class="member-photo">
+              <img src="images/web/member30.jpg" alt="Portrait of Patrick Healy" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Patrick Healy</h3>
+              <ul class="traits"><li>Lacrosse player</li><li>Former golfer</li><li>Very smart</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="kolbe green brother dewey beach patrol life guard short distance track demon great sense of humor" data-kind="brothers" style="--d:3">
+            <div class="member-photo">
+              <img src="images/web/member31.jpg" alt="Portrait of Kolbe Green" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Kolbe Green</h3>
+              <ul class="traits"><li>Dewey Beach Patrol life guard</li><li>Short distance track demon</li><li>Great sense of humor</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="ryan morgan brother lacrosse player mr. hosts alot very smart" data-kind="brothers" style="--d:0">
+            <div class="member-photo">
+              <img src="images/web/member32.jpg" alt="Portrait of Ryan Morgan" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Ryan Morgan</h3>
+              <ul class="traits"><li>Lacrosse player</li><li>Mr. Hosts alot</li><li>Very smart</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="marshall keys brother lacrosse player soccer player big boat guy" data-kind="brothers" style="--d:1">
+            <div class="member-photo">
+              <img src="images/web/member33.jpg" alt="Portrait of Marshall Keys" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Marshall Keys</h3>
+              <ul class="traits"><li>Lacrosse player</li><li>Soccer player</li><li>Big boat guy</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="alan john grapski brother ladies man lacrosse player can&#x27;t stick with one hobby" data-kind="brothers" style="--d:2">
+            <div class="member-photo">
+              <img src="images/web/member34.jpg" alt="Portrait of Alan John Grapski" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Alan John Grapski</h3>
+              <ul class="traits"><li>Ladies man</li><li>Lacrosse player</li><li>Can&#x27;t stick with one hobby</li></ul>
+            </div>
+          </article>
+          <article class="brother-card reveal" data-member="joe rurark brother baseball player looks up to aj thinks he&#x27;s him" data-kind="brothers" style="--d:3">
+            <div class="member-photo">
+              <img src="images/web/member35.jpg" alt="Portrait of Joe Rurark" width="1000" height="781" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <p class="member-role">Brother</p>
+              <h3>Joe Rurark</h3>
+              <ul class="traits"><li>Baseball player</li><li>Looks up to AJ</li><li>Thinks he&#x27;s him</li></ul>
+            </div>
+          </article>
+        </div>
+      </section>
 
-  <div class="brother-card">
-    <img src="images/member12.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Conor Garman</h2>
-      <ul class="member-bullets">
-        <li>Stud of a drinker</li>
-        <li>Braved a vicous dog attack</li>
-        <li>Manager of the lacrosse team</li>
-      </ul>
+      <div class="empty-state is-hidden" id="members-empty">
+        <p>No members match that search.</p>
+        <button class="btn btn-ghost" type="button" id="clear-search" style="margin-top:16px">Clear Search</button>
+      </div>
     </div>
-  </div>
 
-  <div class="brother-card">
-    <img src="images/member13.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>David Adili-Khams</h2>
-      <ul class="member-bullets">
-        <li>Lacrosse player</li>
-        <li>Incredibly intelligent</li>
-        <li>Random race that isn't white</li>
-      </ul>
+  </main>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Media viewer">
+    <div class="lb-stage"></div>
+    <div class="lb-bar lb-top">
+      <span class="lb-count" aria-live="polite"></span>
+      <button class="icon-btn" type="button" data-lb-close aria-label="Close viewer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
     </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member14.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Cooper Forcucci</h2>
-      <ul class="member-bullets">
-        <li>Professional skim boarder</li>
-        <li>Very smart</li>
-        <li>Best style in the brotherhood</li>
-      </ul>
+    <div class="lb-bar lb-bottom">
+      <button class="icon-btn" type="button" data-lb-prev aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="icon-btn" type="button" data-lb-next aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
     </div>
-  </div>
+  </dialog>
 
-  <div class="brother-card">
-    <img src="images/member15.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Max Levis</h2>
-      <ul class="member-bullets">
-        <li>Smartest guy in the room</li>
-        <li>Great thinker</li>
-        <li>He's crazy!!!</li>
-      </ul>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" translate="no"><span>Σ</span> Cape-Ah</a>
+        <p>The only off campus high school fraternity in the nation. Est.&nbsp;2025.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="members.html">Members</a>
+        <a href="highlights.html">Highlights</a>
+        <a href="gear.html">Gear</a>
+        <a href="operate.html">How We Operate</a>
+      </nav>
+      <button class="to-top" type="button" data-to-top>Back to Top <span aria-hidden="true">↑</span></button>
+      <p class="footer-copy" translate="no">© Sigma Cape-Ah</p>
     </div>
-  </div>
+  </footer>
 
-  <div class="brother-card">
-    <img src="images/member16.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Pierce Conway</h2>
-      <ul class="member-bullets">
-        <li>Lacrosse player</li>
-        <li>Lots of street smarts</li>
-        <li>Human version of a chihuahua</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member17.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Brian Marks</h2>
-      <ul class="member-bullets">
-        <li>Class president</li>
-        <li>Big surfer</li>
-        <li>Big tuna fishing guy</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member18.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Harper Kaser</h2>
-      <ul class="member-bullets">
-        <li>Baseball player</li>
-        <li>Enjoys Surfing</li>
-        <li>Takes great pride in his 4runner build</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member19.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Drew Mongeluzo</h2>
-      <ul class="member-bullets">
-        <li>Lacrosse player</li>
-        <li>Mr. Outdoors</li>
-        <li>Avid 2 girls 1 cup rewatcher</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member20.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Jack Simeone</h2>
-      <ul class="member-bullets">
-        <li>Baseball player</li>
-        <li>Big napper</li>
-        <li>Loves college football</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member21.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>John Keys</h2>
-      <ul class="member-bullets">
-        <li>Boat builder</li>
-        <li>Very intelligent</li>
-        <li>Big boat</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member22.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Lee Levis</h2>
-      <ul class="member-bullets">
-        <li>Soccer player</li>
-        <li>Great team player</li>
-        <li>Super smart</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member23.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Braddock Smith</h2>
-      <ul class="member-bullets">
-        <li>Lacrosse player</li>
-        <li>Problem solver</li>
-        <li>Always reliable</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member24.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Ethan James</h2>
-      <ul class="member-bullets">
-        <li>Baby hippo</li>
-        <li>In AP classes but isn't an AP level student</li>
-        <li>Nickname: Teethan (gives straight teeth)</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member25.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Lawson Whaley</h2>
-      <ul class="member-bullets">
-        <li>Soccer player</li>
-        <li>Volleyball player</li>
-        <li>Loves boating and the beach</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member26.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Matthew Popovich</h2>
-      <ul class="member-bullets">
-        <li>Lacrosse player</li>
-        <li>Great student</li>
-        <li>Very smart</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member27.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Eric Uffleman</h2>
-      <ul class="member-bullets">
-        <li>Lacrosse player</li>
-        <li>Loves boating and spear fishing</li>
-        <li>Gorgeous mustache</li>
-      </ul>
-    </div>
-  </div> 
-
-  <div class="brother-card">
-    <img src="images/member28.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Holden Moore</h2>
-      <ul class="member-bullets">
-        <li>Lacrosse player</li>
-        <li>Little comedian</li>
-        <li>Ambitious</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member29.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Carter Staggs</h2>
-      <ul class="member-bullets">
-        <li>Big hunter</li>
-        <li>Big fisherman</li>
-        <li>Can't find a haircut that fits him</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member30.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Patrick Healy</h2>
-      <ul class="member-bullets">
-        <li>Lacrosse player</li>
-        <li>Former golfer</li>
-        <li>Very smart</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member31.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Kolbe Green</h2>
-      <ul class="member-bullets">
-        <li>Dewey Beach Patrol life guard</li>
-        <li>Short distance track demon</li>
-        <li>Great sense of humor</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member32.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Ryan Morgan</h2>
-      <ul class="member-bullets">
-        <li>Lacrosse player</li>
-        <li>Mr. Hosts alot</li>
-        <li>Very smart</li>
-      </ul>
-    </div>
-  </div>
-
-<div class="brother-card">
-    <img src="images/member33.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Marshall Keys</h2>
-      <ul class="member-bullets">
-        <li>Lacrosse player</li>
-        <li>Soccer player</li>
-        <li>Big boat guy</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member34.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Alan John Grapski</h2>
-      <ul class="member-bullets">
-        <li>Ladies man</li>
-        <li>Lacrosse player</li>
-        <li>Can't stick with one hobby</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brother-card">
-    <img src="images/member35.png" alt="Brother">
-    <div>
-      <p class="member-subtitle">Brother</p>
-      <h2>Joe Rurark</h2>
-      <ul class="member-bullets">
-        <li>Baseball player</li>
-        <li>Looks up to AJ</li>
-        <li>Thinks he's him</li>
-      </ul>
-    </div>
-  </div>
-
-</div>
-
-</section>
-
-  <script src="script.js"></script>
 </body>
 </html>

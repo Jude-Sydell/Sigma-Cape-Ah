@@ -2,95 +2,158 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product | Sigma Cape-Ah</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Golf The Open Tee | Sigma Cape-Ah</title>
+  <meta name="description" content="Golf The Open Tee — A clean white tee with The Masters themed Sigma Cape-Ah graphics on the front left chest and back." />
+  <meta name="theme-color" content="#050505" />
+  <meta property="og:title" content="Golf The Open Tee | Sigma Cape-Ah" />
+  <meta property="og:description" content="Golf The Open Tee — A clean white tee with The Masters themed Sigma Cape-Ah graphics on the front left chest and back." />
+  <meta property="og:image" content="images/web/hero.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23050505'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23cdb47d' font-family='serif'%3E%CE%A3%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20" />
+
+  <script>
+    document.documentElement.classList.add("js");
+    try { if (sessionStorage.getItem("siteAccess") === "granted") document.documentElement.classList.add("access-granted"); } catch (e) {}
+  </script>
+  <script src="script.js?v=20" defer></script>
 </head>
 
-<body class="product-body">
+<body>
+
+  <a class="skip-link" href="#main">Skip to Content</a>
 
   <header class="navbar">
-    <a href="index.html" class="logo">Σ CAPE-AH</a>
+    <a href="index.html" class="logo" translate="no"><span>Σ</span> Cape-Ah</a>
 
-  <nav class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="members.html">Members</a>
-    <a href="highlights.html">Highlights</a>
-    <a href="gear.html" class="active">Gear</a>
-    <a href="operate.html">How We Operate</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="members.html">Members</a>
+      <a href="highlights.html">Highlights</a>
+      <a href="gear.html">Gear</a>
+      <a href="operate.html">How We Operate</a>
+    </nav>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-sheet" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="menu-sheet" id="menu-sheet" aria-label="Mobile">
+    <a href="index.html" style="--i:0"><small>01</small>Home</a>
+    <a href="members.html" style="--i:1"><small>02</small>Members</a>
+    <a href="highlights.html" style="--i:2"><small>03</small>Highlights</a>
+    <a href="gear.html" style="--i:3"><small>04</small>Gear</a>
+    <a href="operate.html" style="--i:4"><small>05</small>How We Operate</a>
   </nav>
-</header>
 
-  <a href="gear.html" class="product-back">←</a>
+  <main id="main">
 
-  <main class="product-layout">
+    <div class="product-page wrap">
+      <a href="gear.html" class="back-link"><span class="arrow" aria-hidden="true">←</span> All Gear</a>
 
-    <section class="product-left">
-      <button class="product-arrow product-arrow-left" onclick="prevImage()">‹</button>
+      <div class="product-layout">
+        <section class="reveal" aria-label="Product images">
+          <div class="gallery" data-gallery>
+            <div class="gallery-track" tabindex="0" aria-label="Product images, swipe or use arrow keys">
+              <div class="gallery-slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
+                <img src="images/web/product1.png" alt="Golf The Open Tee, view 1" width="997" height="1000" fetchpriority="high" decoding="async" />
+              </div>
+              <div class="gallery-slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+                <img src="images/web/product1.2.png" alt="Golf The Open Tee, view 2" width="996" height="1000" loading="lazy" decoding="async" />
+              </div>
+              <div class="gallery-slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+                <img src="images/web/product1.3.png" alt="Golf The Open Tee, view 3" width="992" height="1000" loading="lazy" decoding="async" />
+              </div>
+              <div class="gallery-slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+                <img src="images/web/product1.4.png" alt="Golf The Open Tee, view 4" width="994" height="1000" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <button class="icon-btn gallery-arrow prev" type="button" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button class="icon-btn gallery-arrow next" type="button" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+          <div class="gallery-thumbs">
+            <button class="thumb" type="button" aria-label="Show image 1" aria-current="true"><img src="images/web/product1.png" alt="" width="997" height="1000" loading="lazy" /></button>
+            <button class="thumb" type="button" aria-label="Show image 2" aria-current="false"><img src="images/web/product1.2.png" alt="" width="996" height="1000" loading="lazy" /></button>
+            <button class="thumb" type="button" aria-label="Show image 3" aria-current="false"><img src="images/web/product1.3.png" alt="" width="992" height="1000" loading="lazy" /></button>
+            <button class="thumb" type="button" aria-label="Show image 4" aria-current="false"><img src="images/web/product1.4.png" alt="" width="994" height="1000" loading="lazy" /></button>
+          </div>
+        </section>
 
-      <div class="product-image-card">
-        <img id="productImage" src="images/product1.png" alt="Product Image" />
+        <section class="product-info reveal" style="--d:1">
+          <p class="label">Sigma Cape-Ah Gear</p>
+          <h1>Golf The Open Tee</h1>
+          <p class="product-price">$18.57+</p>
+          <p class="product-description">A clean white tee with The Masters themed Sigma Cape-Ah graphics on the front left chest and back.</p>
+          <a href="https://www.etsy.com/listing/4496717177/sigma-cape-ah-golf-the-open-tee?ref=shop_home_active_1&amp;logging_key=84e831478fc8db41f6a8938b5762751943b11578%3A4496717177" class="btn" target="_blank" rel="noopener">Buy Now on Etsy <span class="arrow" aria-hidden="true">↗</span></a>
+          <p class="buy-note">Opens Etsy in a new tab.</p>
+        </section>
       </div>
+    </div>
 
-      <button class="product-arrow product-arrow-right" onclick="nextImage()">›</button>
-
-      <div class="product-dots">
-        <button class="product-dot active" onclick="goToImage(0)"></button>
-        <button class="product-dot" onclick="goToImage(1)"></button>
-        <button class="product-dot" onclick="goToImage(2)"></button>
-        <button class="product-dot" onclick="goToImage(3)"></button>
+    <section class="section" aria-labelledby="more-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="label">Keep Shopping</p>
+            <h2 id="more-title">More Gear</h2>
+          </div>
+        </div>
+        <div class="gear-grid more-gear">
+        <a href="product2.html" class="gear-card reveal" style="--d:0">
+          <div class="gear-img">
+            <img src="images/web/product2.png" alt="" width="990" height="1000" loading="lazy" decoding="async" />
+          </div>
+          <div class="gear-meta">
+            <h3>Camo First Edition Hoodie</h3>
+            <span class="price">$62.23+</span>
+          </div>
+        </a>
+        <a href="product3.html" class="gear-card reveal" style="--d:1">
+          <div class="gear-img">
+            <img src="images/web/product3.jpg" alt="" width="968" height="1000" loading="lazy" decoding="async" class="fill" />
+          </div>
+          <div class="gear-meta">
+            <h3>Men&#x27;s Soft Shell Vest</h3>
+            <span class="price">$51.39+</span>
+          </div>
+        </a>
+        <a href="product4.html" class="gear-card reveal" style="--d:2">
+          <div class="gear-img">
+            <img src="images/web/product4.jpg" alt="" width="1000" height="978" loading="lazy" decoding="async" class="fill" />
+          </div>
+          <div class="gear-meta">
+            <h3>Stretch Quarter Zip Pullover</h3>
+            <span class="price">$51.10+</span>
+          </div>
+        </a>
+        </div>
       </div>
-    </section>
-
-    <section class="product-info">
-      <p class="product-label">SIGMA CAPE-AH GEAR</p>
-
-      <h1>Golf The Open Tee</h1>
-
-      <p class="product-price">$18.57+</p>
-
-      <p class="product-description">
-        A clean white tee with The Masters themed Sigma Cape-Ah graphics on the front left chest and back.
-      </p>
-
-      <a href="https://www.etsy.com/listing/4496717177/sigma-cape-ah-golf-the-open-tee?ref=shop_home_active_1&logging_key=84e831478fc8db41f6a8938b5762751943b11578%3A4496717177" class="product-buy">Buy Now</a>
     </section>
 
   </main>
 
-  <script>
-    const images = [
-      "images/product1.png",
-      "images/product1.2.png",
-      "images/product1.3.png",
-      "images/product1.4.png"
-    ];
-
-    let currentImage = 0;
-
-    function updateImage() {
-      document.getElementById("productImage").src = images[currentImage];
-
-      document.querySelectorAll(".product-dot").forEach((dot, index) => {
-        dot.classList.toggle("active", index === currentImage);
-      });
-    }
-
-    function nextImage() {
-      currentImage = (currentImage + 1) % images.length;
-      updateImage();
-    }
-
-    function prevImage() {
-      currentImage = (currentImage - 1 + images.length) % images.length;
-      updateImage();
-    }
-
-    function goToImage(index) {
-      currentImage = index;
-      updateImage();
-    }
-  </script>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" translate="no"><span>Σ</span> Cape-Ah</a>
+        <p>The only off campus high school fraternity in the nation. Est.&nbsp;2025.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="members.html">Members</a>
+        <a href="highlights.html">Highlights</a>
+        <a href="gear.html">Gear</a>
+        <a href="operate.html">How We Operate</a>
+      </nav>
+      <button class="to-top" type="button" data-to-top>Back to Top <span aria-hidden="true">↑</span></button>
+      <p class="footer-copy" translate="no">© Sigma Cape-Ah</p>
+    </div>
+  </footer>
 
 </body>
 </html>

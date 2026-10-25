@@ -2,77 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>How We Operate | Sigma Cape-Ah</title>
+  <meta name="description" content="How Sigma Cape-Ah operates: our purpose and the path to brotherhood." />
+  <meta name="theme-color" content="#050505" />
+  <meta property="og:title" content="How We Operate | Sigma Cape-Ah" />
+  <meta property="og:description" content="How Sigma Cape-Ah operates: our purpose and the path to brotherhood." />
+  <meta property="og:image" content="images/web/hero.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23050505'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23cdb47d' font-family='serif'%3E%CE%A3%3C/text%3E%3C/svg%3E" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20" />
+
+  <script>
+    document.documentElement.classList.add("js");
+    try { if (sessionStorage.getItem("siteAccess") === "granted") document.documentElement.classList.add("access-granted"); } catch (e) {}
+  </script>
+  <script src="script.js?v=20" defer></script>
 </head>
 
-<body class="operate-page">
+<body>
+
+  <a class="skip-link" href="#main">Skip to Content</a>
 
   <header class="navbar">
-    <a href="index.html" class="logo">Σ Cape-Ah</a>
+    <a href="index.html" class="logo" translate="no"><span>Σ</span> Cape-Ah</a>
 
-    <nav class="nav-links">
-   <a href="index.html">Home</a>
-    <a href="members.html">Members</a>
-   <a href="highlights.html">Highlights</a>
-   <a href="gear.html">Gear</a>
-   <a href="operate.html" class="active">How We Operate</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="members.html">Members</a>
+      <a href="highlights.html">Highlights</a>
+      <a href="gear.html">Gear</a>
+      <a href="operate.html" aria-current="page">How We Operate</a>
     </nav>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-sheet" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
   </header>
 
-  <div class="operate-spacer"></div>
+  <nav class="menu-sheet" id="menu-sheet" aria-label="Mobile">
+    <a href="index.html" style="--i:0"><small>01</small>Home</a>
+    <a href="members.html" style="--i:1"><small>02</small>Members</a>
+    <a href="highlights.html" style="--i:2"><small>03</small>Highlights</a>
+    <a href="gear.html" style="--i:3"><small>04</small>Gear</a>
+    <a href="operate.html" style="--i:4" aria-current="page"><small>05</small>How We Operate</a>
+  </nav>
 
-  <section class="about-section">
+  <main id="main">
 
-    <div class="about-row intro-row">
-      <div class="about-text">
-        <p class="section-label">About Us</p>
-        <h2>Built on brotherhood</h2>
-        <p>
-          Sigma Cape-Ah is an off-campus high school fraternity built around
-          creating a sense of community and providing an outlet for a good time. Our goal is
-          to create a group that represents leadership, and organization
-          beyond the school building.
-        </p>
+    <section class="page-head">
+      <div class="wrap">
+        <p class="label reveal">Who We Are</p>
+        <h1 class="reveal" style="--d:1">How We Operate</h1>
       </div>
+    </section>
 
-      <div class="about-text side-text">
-        <p class="section-label">Purpose</p>
-        <h2>A group with purpose.</h2>
-        <p>
-          We operate with a focus on discipline, competition, and creating something that
-          feels bigger than just a group of friends. Every member represents the name
-          through how they act, show up, and carry themselves.
-        </p>
+    <section class="section" style="padding-top:32px">
+      <div class="wrap">
+        <div class="about-row">
+          <div class="about-text reveal">
+            <p class="label">About Us</p>
+            <h2>Built on brotherhood</h2>
+            <p>
+              Sigma Cape-Ah is an off-campus high school fraternity built around
+              creating a sense of community and providing an outlet for a good time. Our goal is
+              to create a group that represents leadership, and organization
+              beyond the school building.
+            </p>
+          </div>
+
+          <div class="about-text reveal" style="--d:1">
+            <p class="label">Purpose</p>
+            <h2>A group with purpose.</h2>
+            <p>
+              We operate with a focus on discipline, competition, and creating something that
+              feels bigger than just a group of friends. Every member represents the name
+              through how they act, show up, and carry themselves.
+            </p>
+          </div>
+        </div>
+
+        <div class="wide-image parallax reveal">
+          <img src="images/web/about2.jpg" alt="Sigma Cape-Ah group photo" width="1600" height="1200" loading="lazy" decoding="async" />
+        </div>
+
+        <div class="about-row align-center">
+          <div class="about-text reveal">
+            <p class="label">Brotherhood</p>
+            <h2>Becoming a brother</h2>
+            <p>
+              Before becoming an official brother you must go through a 1 year pledging
+              process. In order to become a pledge you must first be invited by the standing president, or suggested
+              to the fellow brothers by a current member. The pledging process involves no hazing, but rather occasional competitions that are mandatory for a pledge to compete in.
+              After 1 school year of being a pledge you will officially be accepted as a brother and now have the ability to run for a position in the fraternity.
+            </p>
+          </div>
+
+          <div class="blend-image reveal" style="--d:1">
+            <img src="images/web/about1.jpg" alt="Sigma Cape-Ah logo" width="1600" height="900" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
+        <ol class="timeline" aria-label="The path to brotherhood">
+          <li class="reveal">
+            <h3>Get the Invite</h3>
+            <p>Invited by the standing president, or suggested to the brothers by a current member.</p>
+          </li>
+          <li class="reveal" style="--d:1">
+            <h3>Pledge for 1 Year</h3>
+            <p>One school year as a pledge. No hazing &mdash; just mandatory competitions.</p>
+          </li>
+          <li class="reveal" style="--d:2">
+            <h3>Become a Brother</h3>
+            <p>Officially accepted, with the ability to run for a position in the fraternity.</p>
+          </li>
+        </ol>
       </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" translate="no"><span>Σ</span> Cape-Ah</a>
+        <p>The only off campus high school fraternity in the nation. Est.&nbsp;2025.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="members.html">Members</a>
+        <a href="highlights.html">Highlights</a>
+        <a href="gear.html">Gear</a>
+        <a href="operate.html">How We Operate</a>
+      </nav>
+      <button class="to-top" type="button" data-to-top>Back to Top <span aria-hidden="true">↑</span></button>
+      <p class="footer-copy" translate="no">© Sigma Cape-Ah</p>
     </div>
+  </footer>
 
-    <div class="wide-image">
-      <img src="images/about2.JPG" alt="Sigma Cape-Uh group image">
-    </div>
-
-    <div class="about-row bottom-row">
-      <div class="about-text">
-        <p class="section-label">Brotherhood</p>
-        <h2>Becoming a brother</h2>
-        <p>
-          Before becoming an official brother you must go through a 1 year pledging
-          process. In order to become a pledge you must first be invited by the standing president, or suggested
-          to the fellow brothers by a current member. The pledging process involves no hazing, but rather occasional competitions that are mandatory for a pledge to compete in.
-          After 1 school year of being a pledge you will officially be accepted as a brother and now have the ability to run for a position in the fraternity.
-        </p>
-      </div>
-
-      <div class="blend-image">
-        <img src="images/about1.JPG" alt="Sigma Cape-Uh logo">
-      </div>
-    </div>
-
-  </section>
-
-  <script src="script.js"></script>
 </body>
 </html>
