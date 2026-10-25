@@ -6,7 +6,7 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 
 function store(method, key, value) {
   try {
-    return method === "get" ? sessionStorage.getItem(key) : sessionStorage.setItem(key, value);
+    return method === "get" ? localStorage.getItem(key) : localStorage.setItem(key, value);
   } catch (e) {
     return null;
   }
@@ -108,7 +108,7 @@ function initPassword() {
   const box = overlay.querySelector(".passwordBox");
   const behind = [...document.body.children].filter((el) => el !== overlay && el.tagName !== "SCRIPT");
 
-  // Already unlocked this session
+  // Already unlocked on this device
   if (store("get", "siteAccess") === "granted") {
     overlay.remove();
     return;
